@@ -20,12 +20,12 @@
     <Button
         android:id="@+id/deal_cards_button"
         android:text="DEAL CARDS"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
         android:layout_below="@+id/welcome_message_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="89dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/dealer_hand_text"
@@ -36,7 +36,7 @@
         android:layout_below="@+id/deal_cards_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp" />
-    
+
     <TextView
         android:id="@+id/player_hand_text"
         android:text="The player got dealt this"
@@ -51,12 +51,11 @@
     <TextView
         android:id="@+id/result_text"
         android:text="This is the result"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
         android:layout_below="@+id/player_hand_text"
-        android:layout_alignLeft="@+id/player_hand_text"
-        android:layout_alignStart="@+id/player_hand_text"
-        android:layout_marginTop="57dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
