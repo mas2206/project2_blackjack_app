@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.codeclan.com.blackjackapp.MainActivity">
+
+    <TextView
+        android:id="@+id/welcome_message_text"
+        android:text="WELCOME MESSAGE"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+
+    <Button
+        android:id="@+id/deal_cards_button"
+        android:text="DEAL CARDS"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_message_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp" />
+
+    <TextView
+        android:id="@+id/dealer_hand_text"
+        android:text="The dealer got dealt this"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deal_cards_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp" />
+    
+    <TextView
+        android:id="@+id/player_hand_text"
+        android:text="The player got dealt this"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/dealer_hand_text"
+        android:layout_alignRight="@+id/dealer_hand_text"
+        android:layout_alignEnd="@+id/dealer_hand_text" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:text="This is the result"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/player_hand_text"
+        android:layout_alignLeft="@+id/player_hand_text"
+        android:layout_alignStart="@+id/player_hand_text"
+        android:layout_marginTop="57dp" />
+
+</RelativeLayout>
