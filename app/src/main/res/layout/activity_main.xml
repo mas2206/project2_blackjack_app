@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="41dp"
         android:layout_below="@+id/welcome_message_text"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onDealCardsButtonClick"/>
 
     <TextView
         android:id="@+id/dealer_hand_text"
