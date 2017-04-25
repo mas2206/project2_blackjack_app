@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onDealCardsButtonClick(View view) {
-        //set up game - game.setUpGame();
-        //display text on the screen with hand values for both players - game.playerOne/TwoHand();
-        //calculate winner - game.calculateWinner();
-        //display winner
+        game.setupGame();
+        game.playerOneHand();
+        game.playerTwoHand();
+        game.calculateWinnerAndDisplay();
     }
 
 }
