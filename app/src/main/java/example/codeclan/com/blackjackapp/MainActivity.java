@@ -6,9 +6,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Game game;
+    Player player1;
+    Player player2;
+    Hand hand1;
+    Hand hand2;
+    Deck deck;
     TextView playerOneHandText;
     TextView playerTwoHandText;
     TextView resultText;
@@ -27,14 +34,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPlayGameButtonClick(View view) {
+        deck = new Deck(new ArrayList<Card>());
+        hand1 = new Hand();
+        hand2 = new Hand();
+        player1 = new Player("Michael", hand1);
+        player2 = new Player("John", hand2);
+        ArrayList<Player> players = new ArrayList<Player>();
+        players.add(player1);
+        players.add(player2);
+        game = new Game(players, deck);
         game.setupGame();
         String playerOneHand = game.playerOneHand();
         String playerTwoHand = game.playerTwoHand();
         Player winner = game.calculateWinner();
         String winnerMessage = game.displayWinner(winner);
 
-        playerOneHandText.setText(playerOneHand);
-        playerTwoHandText.setText(playerTwoHand);
+        playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand);
+        playerTwoHandText.setText(player2.getPlayerName() + "'s hand: " + playerTwoHand);
         resultText.setText(winnerMessage);
     }
 
