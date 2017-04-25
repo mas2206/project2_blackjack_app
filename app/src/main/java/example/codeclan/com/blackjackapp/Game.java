@@ -15,12 +15,9 @@ public class Game {
     }
 
     private void dealCards() {
-        Card card;
-
         for (Player player : players) {
             deck.dealCard(player);
             deck.dealCard(player);
-            String totalValue = "Total: " + player.getHandValue();
         }
     }
 
@@ -45,11 +42,5 @@ public class Game {
     public String displayWinner(Player player) {
         return player.getPlayerName() + " wins!";
     }
-
-    /*
-        Player winner = game.calculateWinner();
-        String display = game.displayWinner(winner);
-
-     */
 
 }
