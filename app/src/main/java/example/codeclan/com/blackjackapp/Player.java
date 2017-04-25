@@ -26,4 +26,12 @@ public class Player {
         return hand.getHandValue();
     }
 
+    public String getStartingCardsName() {
+        String cards = "";
+        for (Card card : hand.getCards()) {
+            cards += card.getCardName() + ", ";
+        }
+        return cards;
+    }
+
 }

@@ -24,15 +24,23 @@ public class Game {
         }
     }
 
-    private void calculateWinner() {
-        int indexOfWinner = players[0].getHandValue() > players[1].getHandValue() ? 0 : 1;
-        String result = players[indexOfWinner].getPlayerName() + " wins!";
-    }
-
-    public void play() {
+    public void setupGame() {
         deck.shuffleDeck();
         dealCards();
-        calculateWinner();
+    }
+
+    public String playerOneHand() {
+        return players[0].getStartingCardsName();
+    }
+
+    public String playerTwoHand() {
+        return players[1].getStartingCardsName();
+    }
+
+    public String calculateWinnerAndDisplay() {
+        int indexOfWinner = players[0].getHandValue() > players[1].getHandValue() ? 0 : 1;
+        String winner = players[indexOfWinner].getPlayerName() + " wins!";
+        return winner;
     }
 
 }

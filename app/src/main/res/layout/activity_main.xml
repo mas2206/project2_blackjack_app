@@ -29,8 +29,8 @@
         android:onClick="onDealCardsButtonClick"/>
 
     <TextView
-        android:id="@+id/dealer_hand_text"
-        android:text="The dealer got dealt this"
+        android:id="@+id/player1_hand_text"
+        android:text="Player1 got dealt this"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,15 +39,15 @@
         android:layout_marginTop="76dp" />
 
     <TextView
-        android:id="@+id/player_hand_text"
-        android:text="The player got dealt this"
+        android:id="@+id/player2_hand_text"
+        android:text="Player2 got dealt this"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/dealer_hand_text"
-        android:layout_alignRight="@+id/dealer_hand_text"
-        android:layout_alignEnd="@+id/dealer_hand_text" />
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/player1_hand_text"
+        android:layout_alignRight="@+id/player1_hand_text"
+        android:layout_alignEnd="@+id/player1_hand_text" />
 
     <TextView
         android:id="@+id/result_text"
@@ -55,8 +55,8 @@
         android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_below="@+id/player_hand_text"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/player2_hand_text"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

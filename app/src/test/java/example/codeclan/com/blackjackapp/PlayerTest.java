@@ -34,4 +34,11 @@ public class PlayerTest {
         assertEquals(11, player.getHandValue());
     }
 
+    @Test
+    public void canReturnPlayersHandAsAString() {
+        player.addCardToHand(card1);
+        player.addCardToHand(card2);
+        assertEquals("Eight of Hearts, Three of Clubs, ", player.getStartingCardsName());
+    }
+
 }

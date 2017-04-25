@@ -26,4 +26,8 @@ public class Hand {
         return totalValue;
     }
 
+    public ArrayList<Card> getCards(){
+        return new ArrayList<>(cards);
+    }
+
 }
