@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/welcome_message_text"
-        android:text="WELCOME MESSAGE"
-        android:textSize="25sp"
+        android:text="Closest to 21 wins!"
+        android:textSize="45sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -23,37 +23,52 @@
         android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="24dp"
         android:onClick="onPlayGameButtonClick"
         android:layout_below="@+id/welcome_message_text"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/player1_hand_text"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="157dp"
-        android:layout_below="@+id/play_game_button"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/player2_hand_text"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
+        android:layout_below="@+id/play_game_button"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/player1_hand_value"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/player1_hand_text"
-        android:layout_alignRight="@+id/player1_hand_text"
-        android:layout_alignEnd="@+id/player1_hand_text" />
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/player2_hand_text"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/player1_hand_value"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/player2_hand_value"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/player2_hand_text"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/result_text"
-        android:textSize="40sp"
+        android:textSize="85sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:layout_below="@+id/player2_hand_text"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp" />
 
 </RelativeLayout>

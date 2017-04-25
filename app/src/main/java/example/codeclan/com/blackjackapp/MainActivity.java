@@ -17,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
     Hand hand2;
     Deck deck;
     TextView playerOneHandText;
+    TextView playerOneHandValue;
     TextView playerTwoHandText;
+    TextView playerTwoHandValue;
     TextView resultText;
     Button buttonPlayGame;
 
@@ -28,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         playerOneHandText = (TextView) findViewById(R.id.player1_hand_text);
+        playerOneHandValue = (TextView) findViewById(R.id.player1_hand_value);
         playerTwoHandText = (TextView) findViewById(R.id.player2_hand_text);
+        playerTwoHandValue = (TextView) findViewById(R.id.player2_hand_value);
         resultText = (TextView) findViewById(R.id.result_text);
         buttonPlayGame = (Button) findViewById(R.id.play_game_button);
     }
@@ -37,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         deck = new Deck(new ArrayList<Card>());
         hand1 = new Hand();
         hand2 = new Hand();
-        player1 = new Player("Michael", hand1);
-        player2 = new Player("John", hand2);
+        player1 = new Player("The Dealer", hand1);
+        player2 = new Player("Michael", hand2);
         ArrayList<Player> players = new ArrayList<Player>();
         players.add(player1);
         players.add(player2);
@@ -49,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
         Player winner = game.calculateWinner();
         String winnerMessage = game.displayWinner(winner);
 
-        playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand + " " + player1.getHandValue());
-        playerTwoHandText.setText(player2.getPlayerName() + "'s hand: " + playerTwoHand + " " + player2.getHandValue());
+        playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand);
+        playerOneHandValue.setText("Value of " + player1.getPlayerName() + "'s hand: " + player1.getHandValue());
+        playerTwoHandText.setText(player2.getPlayerName() + "'s hand: " + playerTwoHand);
+        playerTwoHandValue.setText("Value of " + player2.getPlayerName() + "'s hand: " + player2.getHandValue());
         resultText.setText(winnerMessage);
     }
 
