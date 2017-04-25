@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         String playerOneHand = game.playerOneHand();
         String playerTwoHand = game.playerTwoHand();
         Player winner = game.calculateWinner();
-        Boolean draw = game.checkDraw();
         String winnerMessage = game.displayWinner(winner);
 
         playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand);
