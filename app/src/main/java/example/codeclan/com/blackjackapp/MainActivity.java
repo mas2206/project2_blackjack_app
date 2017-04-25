@@ -9,23 +9,33 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Game game;
-    TextView dealersHandText;
-    TextView playersHandText;
+    TextView playerOneHandText;
+    TextView playerTwoHandText;
     TextView resultText;
-    Button buttonDealCards;
+    Button buttonPlayGame;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        playerOneHandText = (TextView) findViewById(R.id.player1_hand_text);
+        playerTwoHandText = (TextView) findViewById(R.id.player2_hand_text);
+        resultText = (TextView) findViewById(R.id.result_text);
+        buttonPlayGame = (Button) findViewById(R.id.play_game_button);
     }
 
-    public void onDealCardsButtonClick(View view) {
+    public void onPlayGameButtonClick(View view) {
         game.setupGame();
-        game.playerOneHand();
-        game.playerTwoHand();
-        game.calculateWinnerAndDisplay();
+        String playerOneHand = game.playerOneHand();
+        String playerTwoHand = game.playerTwoHand();
+        Player winner = game.calculateWinner();
+        String winnerMessage = game.displayWinner(winner);
+
+        playerOneHandText.setText(playerOneHand);
+        playerTwoHandText.setText(playerTwoHand);
+        resultText.setText(winnerMessage);
     }
 
 }

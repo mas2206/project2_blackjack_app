@@ -18,29 +18,27 @@
         android:layout_marginTop="23dp" />
 
     <Button
-        android:id="@+id/deal_cards_button"
+        android:id="@+id/play_game_button"
         android:text="DEAL CARDS"
         android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="47dp"
+        android:onClick="onPlayGameButtonClick"
         android:layout_below="@+id/welcome_message_text"
-        android:layout_centerHorizontal="true"
-        android:onClick="onDealCardsButtonClick"/>
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/player1_hand_text"
-        android:text="Player1 got dealt this"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/deal_cards_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp" />
+        android:layout_marginTop="157dp"
+        android:layout_below="@+id/play_game_button"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/player2_hand_text"
-        android:text="Player2 got dealt this"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +49,6 @@
 
     <TextView
         android:id="@+id/result_text"
-        android:text="This is the result"
         android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

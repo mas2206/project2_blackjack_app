@@ -37,10 +37,19 @@ public class Game {
         return players[1].getStartingCardsName();
     }
 
-    public String calculateWinnerAndDisplay() {
+    public Player calculateWinner() {
         int indexOfWinner = players[0].getHandValue() > players[1].getHandValue() ? 0 : 1;
-        String winner = players[indexOfWinner].getPlayerName() + " wins!";
-        return winner;
+        return players[indexOfWinner];
     }
+
+    public String displayWinner(Player player) {
+        return player.getPlayerName() + " wins!";
+    }
+
+    /*
+        Player winner = game.calculateWinner();
+        String display = game.displayWinner(winner);
+
+     */
 
 }
