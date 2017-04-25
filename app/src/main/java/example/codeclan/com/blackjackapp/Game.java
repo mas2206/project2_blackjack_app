@@ -36,12 +36,25 @@ public class Game {
         return players.get(1).getStartingCardsName();
     }
 
+    public boolean checkDraw() {
+        if (players.get(0).getHandValue() == players.get(1).getHandValue()) {
+            return true;
+        }
+        return false;
+    }
+
     public Player calculateWinner() {
+        if (players.get(0).getHandValue() == players.get(1).getHandValue()) {
+            return null;
+        }
         int indexOfWinner = players.get(0).getHandValue() > players.get(1).getHandValue() ? 0 : 1;
         return players.get(indexOfWinner);
     }
 
     public String displayWinner(Player player) {
+        if (checkDraw() == true) {
+            return "It's a draw!";
+        }
         return player.getPlayerName() + " wins!";
     }
 
