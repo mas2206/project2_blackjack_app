@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         Player winner = game.calculateWinner();
         String winnerMessage = game.displayWinner(winner);
 
-        playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand);
-        playerTwoHandText.setText(player2.getPlayerName() + "'s hand: " + playerTwoHand);
+        playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand + " " + player1.getHandValue());
+        playerTwoHandText.setText(player2.getPlayerName() + "'s hand: " + playerTwoHand + " " + player2.getHandValue());
         resultText.setText(winnerMessage);
     }
 
