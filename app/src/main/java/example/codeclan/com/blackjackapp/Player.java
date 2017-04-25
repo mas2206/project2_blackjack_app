@@ -1,5 +1,7 @@
 package example.codeclan.com.blackjackapp;
 
+import java.util.ArrayList;
+
 /**
  * Created by user on 24/04/2017.
  */
@@ -24,6 +26,14 @@ public class Player {
 
     public int getHandValue() {
         return hand.getHandValue();
+    }
+
+    public int getCardOneValue() {
+        return hand.get(0).getCardValue();
+    }
+
+    public int getCardTwoValue() {
+        return hand.get(1).getCardValue();
     }
 
     public String getStartingCardsName() {

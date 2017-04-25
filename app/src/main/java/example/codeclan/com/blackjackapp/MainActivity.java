@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         hand1 = new Hand();
         hand2 = new Hand();
         player1 = new Player("The Dealer", hand1);
-        player2 = new Player("Michael", hand2);
+        player2 = new Player("You", hand2);
         ArrayList<Player> players = new ArrayList<Player>();
         players.add(player1);
         players.add(player2);
@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
         String winnerMessage = game.displayWinner(winner);
 
         playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand);
-        playerOneHandValue.setText("Value of " + player1.getPlayerName() + "'s hand: " + player1.getHandValue());
-        playerTwoHandText.setText(player2.getPlayerName() + "'s hand: " + playerTwoHand);
-        playerTwoHandValue.setText("Value of " + player2.getPlayerName() + "'s hand: " + player2.getHandValue());
+        playerOneHandValue.setText("Value: " + player1.getHandValue());
+        playerTwoHandText.setText(player2.getPlayerName() + "r hand: " + playerTwoHand);
+        playerTwoHandValue.setText("Value:  " + player2.getHandValue());
         resultText.setText(winnerMessage);
     }
 
