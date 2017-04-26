@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
         playerOneHandValue.setText(" " + player1.getHandValue());
 
-        //R.STRING.APP_NAME
-
         playerTwoHandText.setText(playerTwoHand);
         playerTwoHandValue.setText(" " + player2.getHandValue());
         resultText.setText(winnerMessage);
