@@ -13,12 +13,6 @@ public class CardTest {
     Card card;
 
     @Test
-    public void aceValueIsEleven() {
-        card = new Card(Rank.Ace, Suit.Spades);
-        assertEquals(11, card.getCardValue());
-    }
-
-    @Test
     public void fiveValueIsFive() {
         card = new Card(Rank.Five, Suit.Spades);
         assertEquals(5, card.getCardValue());
@@ -40,6 +34,12 @@ public class CardTest {
     public void kingValueIsTen() {
         card = new Card(Rank.King, Suit.Spades);
         assertEquals(10, card.getCardValue());
+    }
+
+    @Test
+    public void aceValueIsEleven() {
+        card = new Card(Rank.Ace, Suit.Spades);
+        assertEquals(11, card.getCardValue());
     }
 
     @Test

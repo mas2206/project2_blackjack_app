@@ -36,13 +36,6 @@ public class Game {
         return players.get(1).getStartingCardsName();
     }
 
-    public boolean checkDraw() {
-        if (players.get(0).getHandValue() == players.get(1).getHandValue()) {
-            return true;
-        }
-        return false;
-    }
-
     public boolean checkForBlackjack() {
         if(getBlackJackWinner() != null) {
             return true;
@@ -64,12 +57,11 @@ public class Game {
         return null;
     }
 
-
     public Player calculateWinner() {
         if (players.get(0).getHandValue() == players.get(1).getHandValue()) {
             return null;
         }
-        if(checkForBlackjack()) {
+        if(checkForBlackjack() == true) {
             return getBlackJackWinner();
         }
         int indexOfWinner = players.get(0).getHandValue() > players.get(1).getHandValue() ? 0 : 1;
@@ -81,7 +73,7 @@ public class Game {
             return "It's a draw!";
         }
         else if (checkForBlackjack() == true) {
-            return player.getPlayerName() + " got a Blackjack and won!";
+            return "Blackjack! " + player.getPlayerName() + " won!";
         }
         return player.getPlayerName() + " won!";
     }

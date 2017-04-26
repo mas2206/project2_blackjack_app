@@ -24,30 +24,30 @@ public class GameTest {
     Deck deck;
 
     @Test
-    public void playerWith20BeatsPlayerWith15() {
+    public void playerWithTenBeatsPlayerWithNine() {
         players = new ArrayList<>();
-        player1 = new Player("Player 1", new Hand());
-        player2 = new Player("Player 2", new Hand());
+        player1 = new Player("Michael", new Hand());
+        player2 = new Player("John", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
-        card1 = new Card(Rank.Queen, Suit.Clubs);
-        card2 = new Card(Rank.King, Suit.Hearts);
+        card1 = new Card(Rank.Seven, Suit.Clubs);
+        card2 = new Card(Rank.Three, Suit.Hearts);
         player1.addCardToHand(card1);
         player1.addCardToHand(card2);
-        card3 = new Card(Rank.Ten, Suit.Clubs);
+        card3 = new Card(Rank.Four, Suit.Clubs);
         card4 = new Card(Rank.Five, Suit.Spades);
         player2.addCardToHand(card3);
         player2.addCardToHand(card4);
         Player player = game.calculateWinner();
-        assertEquals("Player 1 won!", game.displayWinner(player));
+        assertEquals("Michael won!", game.displayWinner(player));
     }
 
     @Test
-    public void blackJackCanOccur() {
+    public void blackjackCanOccur() {
         players = new ArrayList<>();
-        player1 = new Player("Player 1", new Hand());
-        player2 = new Player("Player 2", new Hand());
+        player1 = new Player("Michael", new Hand());
+        player2 = new Player("John", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
@@ -60,22 +60,22 @@ public class GameTest {
         player2.addCardToHand(card3);
         player2.addCardToHand(card4);
         Player player = game.calculateWinner();
-        assertEquals("Player 1 got a Blackjack and won!", game.displayWinner(player));
+        assertEquals("Blackjack! Michael won!", game.displayWinner(player));
     }
 
     @Test
     public void drawCanOccur() {
         players = new ArrayList<>();
-        player1 = new Player("Player 1", new Hand());
-        player2 = new Player("Player 2", new Hand());
+        player1 = new Player("Michael", new Hand());
+        player2 = new Player("John", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
-        card1 = new Card(Rank.Queen, Suit.Clubs);
-        card2 = new Card(Rank.King, Suit.Hearts);
+        card1 = new Card(Rank.Ten, Suit.Clubs);
+        card2 = new Card(Rank.Ten, Suit.Hearts);
         player1.addCardToHand(card1);
         player1.addCardToHand(card2);
-        card3 = new Card(Rank.Queen, Suit.Hearts);
+        card3 = new Card(Rank.Ten, Suit.Diamonds);
         card4 = new Card(Rank.Ten, Suit.Spades);
         player2.addCardToHand(card3);
         player2.addCardToHand(card4);
@@ -86,8 +86,8 @@ public class GameTest {
     @Test
     public void doubleBlackjackResultsInDraw() {
         players = new ArrayList<>();
-        player1 = new Player("Player 1", new Hand());
-        player2 = new Player("Player 2", new Hand());
+        player1 = new Player("Michael", new Hand());
+        player2 = new Player("John", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
@@ -106,8 +106,8 @@ public class GameTest {
     @Test
     public void doubleAceResultsInBlackjack() {
         players = new ArrayList<>();
-        player1 = new Player("Player 1", new Hand());
-        player2 = new Player("Player 2", new Hand());
+        player1 = new Player("Michael", new Hand());
+        player2 = new Player("John", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
@@ -120,7 +120,7 @@ public class GameTest {
         player2.addCardToHand(card3);
         player2.addCardToHand(card4);
         Player player = game.calculateWinner();
-        assertEquals("Player 1 got a Blackjack and won!", game.displayWinner(player));
+        assertEquals("Blackjack! Michael won!", game.displayWinner(player));
     }
 
 }

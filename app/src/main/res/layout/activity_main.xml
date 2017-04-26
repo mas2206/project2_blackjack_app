@@ -6,12 +6,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="example.codeclan.com.blackjackapp.MainActivity">
+    tools:context="example.codeclan.com.blackjackapp.MainActivity"
+    android:background="@drawable/ace_background">
 
     <TextView
         android:id="@+id/welcome_message_text"
         android:text="@string/rules"
         android:textSize="30sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -32,6 +35,8 @@
         android:id="@+id/player1_hand_setup"
         android:text="@string/player1_hand_setup"
         android:textSize="25sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -40,7 +45,9 @@
 
     <TextView
         android:id="@+id/player1_hand_text"
-        android:textSize="45sp"
+        android:textSize="50sp"
+        android:textColor="#ff0000"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/player1_hand_setup"
@@ -50,6 +57,8 @@
         android:id="@+id/player1_value_setup"
         android:text="@string/player1_value_setup"
         android:textSize="25sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/player1_hand_text"
@@ -57,7 +66,9 @@
 
     <TextView
         android:id="@+id/player1_hand_value"
-        android:textSize="45sp"
+        android:textSize="50sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/player1_value_setup"
@@ -68,6 +79,8 @@
         android:id="@+id/player2_hand_setup"
         android:text="@string/player2_hand_setup"
         android:textSize="25sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/player2_hand_text"
@@ -75,7 +88,9 @@
 
     <TextView
         android:id="@+id/player2_hand_text"
-        android:textSize="45sp"
+        android:textSize="50sp"
+        android:textColor="#ff0000"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/player2_value_setup"
@@ -86,6 +101,8 @@
         android:id="@+id/player2_value_setup"
         android:text="@string/player2_value_setup"
         android:textSize="25sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/player2_hand_value"
@@ -93,7 +110,9 @@
 
     <TextView
         android:id="@+id/player2_hand_value"
-        android:textSize="45sp"
+        android:textSize="50sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/result_text"
@@ -103,6 +122,8 @@
     <TextView
         android:id="@+id/result_text"
         android:textSize="60sp"
+        android:textColor="#ffff00"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     TextView resultText;
     Button buttonPlayGame;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
