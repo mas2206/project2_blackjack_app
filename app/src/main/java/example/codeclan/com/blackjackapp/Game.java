@@ -67,21 +67,17 @@ public class Game {
                 return player;
             }
         }
-
         return null;
     }
 
 
     public Player calculateWinner() {
-
         if (players.get(0).getHandValue() == players.get(1).getHandValue()) {
             return null;
         }
-
         if(checkForBlackjack()) {
             return getBlackJackWinner();
         }
-
         int indexOfWinner = players.get(0).getHandValue() > players.get(1).getHandValue() ? 0 : 1;
         return players.get(indexOfWinner);
     }
