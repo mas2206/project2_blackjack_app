@@ -55,11 +55,30 @@ public class Game {
         return false;
     }
 
+    private Player getBlackJackWinner() {
+        for (Player player : players) {
+            if (player.getCardOneValue() == 1 && player.getCardTwoValue() == 10 ) {
+                return player;
+            }
+            else if (player.getCardOneValue() == 10 && player.getCardTwoValue() == 1) {
+                return player;
+            }
+        }
+
+        return null;
+    }
+
 
     public Player calculateWinner() {
+
+        if(checkForBlackjack()) {
+            return getBlackJackWinner();
+        }
+
         if (players.get(0).getHandValue() == players.get(1).getHandValue()) {
             return null;
         }
+
         int indexOfWinner = players.get(0).getHandValue() > players.get(1).getHandValue() ? 0 : 1;
         return players.get(indexOfWinner);
     }
@@ -69,7 +88,7 @@ public class Game {
             return "It's a draw!";
         }
         else if (checkForBlackjack() == true) {
-            return player.getPlayerName() + " got Blackjack!";
+            return player.getPlayerName() + " got a Blackjack and won!";
         }
         return player.getPlayerName() + " won!";
     }

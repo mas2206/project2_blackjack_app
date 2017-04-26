@@ -29,11 +29,11 @@ public class Player {
     }
 
     public int getCardOneValue() {
-        return hand.get(0).getCardValue();
+        return hand.getCards().get(0).getCardValue();
     }
 
     public int getCardTwoValue() {
-        return hand.get(1).getCardValue();
+        return hand.getCards().get(1).getCardValue();
     }
 
     public String getStartingCardsName() {

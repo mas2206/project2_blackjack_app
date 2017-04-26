@@ -50,7 +50,13 @@ public class MainActivity extends AppCompatActivity {
         game.setupGame();
         String playerOneHand = game.playerOneHand();
         String playerTwoHand = game.playerTwoHand();
+
+        //When we calculate winner, it will always be the guy with the higher hand
+        //never blackjack
         Player winner = game.calculateWinner();
+
+        //When we display winner
+        //black was true but winner was still the non blackjack guy
         String winnerMessage = game.displayWinner(winner);
 
         playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand);
