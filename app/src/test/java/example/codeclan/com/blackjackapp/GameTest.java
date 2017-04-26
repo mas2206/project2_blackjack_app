@@ -26,10 +26,8 @@ public class GameTest {
     @Test
     public void playerWith20BeatsPlayerWith15() {
         players = new ArrayList<>();
-
-        player1 = new Player("Michael", new Hand());
-        player2 = new Player("John", new Hand());
-
+        player1 = new Player("Player 1", new Hand());
+        player2 = new Player("Player 2", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
@@ -42,16 +40,14 @@ public class GameTest {
         player2.addCardToHand(card3);
         player2.addCardToHand(card4);
         Player player = game.calculateWinner();
-        assertEquals("Michael won!", game.displayWinner(player));
+        assertEquals("Player 1 won!", game.displayWinner(player));
     }
 
     @Test
     public void blackJackCanOccur() {
         players = new ArrayList<>();
-
-        player1 = new Player("Michael", new Hand());
-        player2 = new Player("John", new Hand());
-
+        player1 = new Player("Player 1", new Hand());
+        player2 = new Player("Player 2", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
@@ -64,16 +60,14 @@ public class GameTest {
         player2.addCardToHand(card3);
         player2.addCardToHand(card4);
         Player player = game.calculateWinner();
-        assertEquals("Michael got a Blackjack and won!", game.displayWinner(player));
+        assertEquals("Player 1 got a Blackjack and won!", game.displayWinner(player));
     }
 
     @Test
     public void drawCanOccur() {
         players = new ArrayList<>();
-
-        player1 = new Player("Michael", new Hand());
-        player2 = new Player("John", new Hand());
-
+        player1 = new Player("Player 1", new Hand());
+        player2 = new Player("Player 2", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
@@ -92,10 +86,8 @@ public class GameTest {
     @Test
     public void doubleBlackjackResultsInDraw() {
         players = new ArrayList<>();
-
-        player1 = new Player("Michael", new Hand());
-        player2 = new Player("John", new Hand());
-
+        player1 = new Player("Player 1", new Hand());
+        player2 = new Player("Player 2", new Hand());
         players.add(player1);
         players.add(player2);
         game = new Game(players, deck);
@@ -111,5 +103,24 @@ public class GameTest {
         assertEquals("It's a draw!", game.displayWinner(player));
     }
 
+    @Test
+    public void doubleAceResultsInBlackjack() {
+        players = new ArrayList<>();
+        player1 = new Player("Player 1", new Hand());
+        player2 = new Player("Player 2", new Hand());
+        players.add(player1);
+        players.add(player2);
+        game = new Game(players, deck);
+        card1 = new Card(Rank.Ace, Suit.Spades);
+        card2 = new Card(Rank.Ace, Suit.Hearts);
+        player1.addCardToHand(card1);
+        player1.addCardToHand(card2);
+        card3 = new Card(Rank.Two, Suit.Clubs);
+        card4 = new Card(Rank.Three, Suit.Clubs);
+        player2.addCardToHand(card3);
+        player2.addCardToHand(card4);
+        Player player = game.calculateWinner();
+        assertEquals("Player 1 got a Blackjack and won!", game.displayWinner(player));
+    }
 
 }

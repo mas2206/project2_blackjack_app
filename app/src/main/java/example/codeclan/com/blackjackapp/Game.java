@@ -44,16 +44,8 @@ public class Game {
     }
 
     public boolean checkForBlackjack() {
-        for (Player player : players) {
-            if (player.getCardOneValue() == 11 && player.getCardTwoValue() == 10 ) {
-                return true;
-            }
-            else if (player.getCardOneValue() == 10 && player.getCardTwoValue() == 11) {
-                return true;
-            }
-            else if (player.getCardOneValue() == 11 && player.getCardTwoValue() == 11) {
-                return true;
-            }
+        if(getBlackJackWinner() != null) {
+            return true;
         }
         return false;
     }
@@ -64,6 +56,8 @@ public class Game {
                 return player;
             }
             else if (player.getCardOneValue() == 10 && player.getCardTwoValue() == 11) {
+                return player;
+            } else if (player.getCardOneValue() == 11 && player.getCardTwoValue() == 11) {
                 return player;
             }
         }
