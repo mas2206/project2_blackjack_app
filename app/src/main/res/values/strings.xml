@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BlackjackApp</string>
+    <string name="rules">Closest to 21 wins! Blackjack(an Ace and any 10 value card) beats all.</string>
+    <string name="button_text">DEAL CARDS</string>
+    <string name="player1_hand_setup">The dealers hand:</string>
+    <string name="player1_value_setup">Dealers hand value:</string>
+    <string name="player2_hand_setup">Your hand:</string>
+    <string name="player2_value_setup">Your hand value:</string>
 </resources>

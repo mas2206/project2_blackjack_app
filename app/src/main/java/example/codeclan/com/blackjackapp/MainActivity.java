@@ -53,10 +53,14 @@ public class MainActivity extends AppCompatActivity {
         Player winner = game.calculateWinner();
         String winnerMessage = game.displayWinner(winner);
 
-        playerOneHandText.setText(player1.getPlayerName() + "'s hand: " + playerOneHand);
-        playerOneHandValue.setText("Value: " + player1.getHandValue());
-        playerTwoHandText.setText(player2.getPlayerName() + "r hand: " + playerTwoHand);
-        playerTwoHandValue.setText("Value:  " + player2.getHandValue());
+        playerOneHandText.setText(playerOneHand);
+
+        playerOneHandValue.setText(" " + player1.getHandValue());
+
+        //R.STRING.APP_NAME
+
+        playerTwoHandText.setText(playerTwoHand);
+        playerTwoHandValue.setText(" " + player2.getHandValue());
         resultText.setText(winnerMessage);
     }
 
