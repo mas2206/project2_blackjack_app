@@ -41,7 +41,7 @@ public class Player {
         for (Card card : hand.getCards()) {
             cards += card.getCardName() + ", ";
         }
-        return cards;
+        return cards.substring(0, cards.length() - 2);
     }
 
 }
