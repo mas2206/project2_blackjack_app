@@ -54,9 +54,7 @@ public class MainActivity extends AppCompatActivity {
         String winnerMessage = game.displayWinner(winner);
 
         playerOneHandText.setText(playerOneHand);
-
         playerOneHandValue.setText(" " + player1.getHandValue());
-
         playerTwoHandText.setText(playerTwoHand);
         playerTwoHandValue.setText(" " + player2.getHandValue());
         resultText.setText(winnerMessage);

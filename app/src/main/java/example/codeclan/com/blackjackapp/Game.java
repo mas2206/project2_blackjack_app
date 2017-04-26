@@ -87,7 +87,7 @@ public class Game {
     }
 
     public String displayWinner(Player player) {
-        if (checkDraw() == true) {
+        if (player == null) {
             return "It's a draw!";
         }
         else if (checkForBlackjack() == true) {
