@@ -13,7 +13,7 @@ public class CardTest {
     Card card;
 
     @Test
-    public void aceValueIsOne() {
+    public void aceValueIsEleven() {
         card = new Card(Rank.Ace, Suit.Spades);
         assertEquals(11, card.getCardValue());
     }

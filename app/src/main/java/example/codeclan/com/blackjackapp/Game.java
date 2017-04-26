@@ -74,12 +74,12 @@ public class Game {
 
     public Player calculateWinner() {
 
-        if(checkForBlackjack()) {
-            return getBlackJackWinner();
-        }
-
         if (players.get(0).getHandValue() == players.get(1).getHandValue()) {
             return null;
+        }
+
+        if(checkForBlackjack()) {
+            return getBlackJackWinner();
         }
 
         int indexOfWinner = players.get(0).getHandValue() > players.get(1).getHandValue() ? 0 : 1;
