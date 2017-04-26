@@ -15,8 +15,9 @@ public class Card {
     }
 
     public int getCardValue() {
-        int value = rank.ordinal() + 1;
-        if (value > 10) value = 10;
+        int value = rank.ordinal() + 2;
+        if (value > 10 && value < 14) value = 10;
+        if (value == 14) value = 11;
         return value;
     }
 

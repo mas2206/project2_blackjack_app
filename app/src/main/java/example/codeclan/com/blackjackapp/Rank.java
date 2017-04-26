@@ -6,7 +6,6 @@ package example.codeclan.com.blackjackapp;
 
 public enum Rank {
 
-    Ace,
     Two,
     Three,
     Four,
@@ -19,5 +18,6 @@ public enum Rank {
     Jack,
     Queen,
     King,
+    Ace
 
 }

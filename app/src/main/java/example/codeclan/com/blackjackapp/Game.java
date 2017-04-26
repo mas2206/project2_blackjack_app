@@ -45,10 +45,13 @@ public class Game {
 
     public boolean checkForBlackjack() {
         for (Player player : players) {
-            if (player.getCardOneValue() == 1 && player.getCardTwoValue() == 10 ) {
+            if (player.getCardOneValue() == 11 && player.getCardTwoValue() == 10 ) {
                 return true;
             }
-            else if (player.getCardOneValue() == 10 && player.getCardTwoValue() == 1) {
+            else if (player.getCardOneValue() == 10 && player.getCardTwoValue() == 11) {
+                return true;
+            }
+            else if (player.getCardOneValue() == 11 && player.getCardTwoValue() == 11) {
                 return true;
             }
         }

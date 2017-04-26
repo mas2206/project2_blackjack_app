@@ -15,7 +15,7 @@ public class CardTest {
     @Test
     public void aceValueIsOne() {
         card = new Card(Rank.Ace, Suit.Spades);
-        assertEquals(1, card.getCardValue());
+        assertEquals(11, card.getCardValue());
     }
 
     @Test
