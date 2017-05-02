@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/welcome_message_text"
         android:text="@string/rules"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="#ffff00"
         android:textStyle="bold"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
     <Button
         android:id="@+id/play_game_button"
         android:text="@string/button_text"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -34,7 +34,7 @@
     <TextView
         android:id="@+id/player1_hand_setup"
         android:text="@string/player1_hand_setup"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:textColor="#ffff00"
         android:textStyle="bold"
         android:layout_width="wrap_content"
@@ -45,8 +45,8 @@
 
     <TextView
         android:id="@+id/player1_hand_text"
-        android:textSize="50sp"
-        android:textColor="#ff0000"
+        android:textSize="30sp"
+        android:textColor="#33cc33"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
     <TextView
         android:id="@+id/player1_value_setup"
         android:text="@string/player1_value_setup"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:textColor="#ffff00"
         android:textStyle="bold"
         android:layout_width="wrap_content"
@@ -66,8 +66,8 @@
 
     <TextView
         android:id="@+id/player1_hand_value"
-        android:textSize="50sp"
-        android:textColor="#ffff00"
+        android:textSize="25sp"
+        android:textColor="#33cc33"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
     <TextView
         android:id="@+id/player2_hand_setup"
         android:text="@string/player2_hand_setup"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:textColor="#ffff00"
         android:textStyle="bold"
         android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
 
     <TextView
         android:id="@+id/player2_hand_text"
-        android:textSize="50sp"
+        android:textSize="30sp"
         android:textColor="#ff0000"
         android:textStyle="bold"
         android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
     <TextView
         android:id="@+id/player2_value_setup"
         android:text="@string/player2_value_setup"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:textColor="#ffff00"
         android:textStyle="bold"
         android:layout_width="wrap_content"
@@ -110,8 +110,8 @@
 
     <TextView
         android:id="@+id/player2_hand_value"
-        android:textSize="50sp"
-        android:textColor="#ffff00"
+        android:textSize="25sp"
+        android:textColor="#ff0000"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
 
     <TextView
         android:id="@+id/result_text"
-        android:textSize="60sp"
+        android:textSize="30sp"
         android:textColor="#ffff00"
         android:textStyle="bold"
         android:layout_width="wrap_content"

@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         deck = new Deck(new ArrayList<Card>());
         hand1 = new Hand();
         hand2 = new Hand();
-        player1 = new Player("The Dealer", hand1);
-        player2 = new Player("You", hand2);
+        player1 = new Player("You", hand1);
+        player2 = new Player("The dealer", hand2);
         ArrayList<Player> players = new ArrayList<Player>();
         players.add(player1);
         players.add(player2);

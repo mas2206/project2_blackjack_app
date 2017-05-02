@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">BlackjackApp</string>
-    <string name="rules">Welcome to Blackjack. Closest to 21 wins!</string>
+    <string name="rules">Closest to 21 wins! Good luck.</string>
     <string name="button_text">DEAL CARDS</string>
-    <string name="player1_hand_setup">The dealers hand:</string>
-    <string name="player1_value_setup">Value of the dealers hand:</string>
-    <string name="player2_hand_setup">Your hand:</string>
-    <string name="player2_value_setup">Value of your hand:</string>
+    <string name="player1_hand_setup">Your hand:</string>
+    <string name="player1_value_setup">Value of your hand:</string>
+    <string name="player2_hand_setup">The dealer\'s hand:</string>
+    <string name="player2_value_setup">Value of the dealer\'s hand:</string>
 </resources>
